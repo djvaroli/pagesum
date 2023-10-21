@@ -1,0 +1,19 @@
+{
+    "manifest_version": 3,
+    "name": "Page Summarizer",
+    "version": "1.0",
+    "description": "Summarize a page's URL and title.",
+    "permissions": ["activeTab", "http://127.0.0.1:8000/"],
+    "background": {
+      "service_worker": "background.js"
+    },
+    "action": {
+      "default_popup": "popup.html",
+      "default_icon": {
+        "16": "icons/icon.svg",
+        "48": "icons/icon.svg",
+        "128": "icons/icon.svg"
+      }
+    }
+  }
+  

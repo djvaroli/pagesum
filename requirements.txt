@@ -1,0 +1,5 @@
+fastapi
+uvicorn
+rich
+notion_client
+python-dotenv
