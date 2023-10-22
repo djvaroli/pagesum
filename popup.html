@@ -6,66 +6,66 @@
     body {
       width: 300px;
       font-family: 'Arial', sans-serif;
-      background-color: #f0faff;
-      color: #333;
-      padding: 15px;
-      border-radius: 5px;
-      box-shadow: 0 0 5px rgba(0,0,0,0.1);
+      background-color: #D3E3FC;
+      color: #00887A;
+      padding: 20px;
+      border-radius: 10px;
     }
 
     button {
       padding: 10px 15px;
       border: none;
-      border-radius: 4px;
-      background-color: #00aaff;
+      border-radius: 6px;
+      background-color: #00887A;
       color: white;
       font-size: 16px;
       cursor: pointer;
-      transition: background-color 0.3s;
-      margin-top: 10px;
+      transition: background-color 0.3s ease;
+      margin-top: 20px;
+      box-shadow: 0 0 10px rgba(0, 136, 122, 0.2);
     }
 
     button:hover {
-      background-color: #0088cc;
+      background-color: #FFCCBC;
     }
 
     div#summary {
-      margin-top: 15px;
+      margin-top: 20px;
     }
 
     label {
       display: block;
-      margin-bottom: 5px;
+      margin-bottom: 10px;
       font-weight: bold;
-      color: #666;
+      color: #00887A;
     }
 
     input[type="text"] {
       width: 100%;
-      padding: 8px;
-      border: 1px solid #ccc;
-      border-radius: 4px;
+      padding: 10px;
+      border: 2px solid #00887A;
+      border-radius: 6px;
       box-sizing: border-box;
-      margin-bottom: 10px;
+      margin-bottom: 20px;
+      color: #00887A;
     }
 
     input[type="text"]:focus {
-      border-color: #00aaff;
-      box-shadow: 0 0 5px rgba(0, 170, 255, 0.5);
+      border-color: #FFCCBC;
+      box-shadow: 0 0 10px rgba(255, 204, 188, 0.2);
     }
 
     #success {
       display: flex;
       align-items: center;
-      gap: 8px;
-      margin-top: 15px;
-      color: #4CAF50;  /* Green color matching the SVG stroke */
+      gap: 10px;
+      margin-top: 25px;
+      color: #4CAF50;
     }
   
     #success span {
         font-weight: bold;
     }
-
   </style>
 </head>
 <body>
@@ -83,5 +83,5 @@
         <span>Saved successfully!</span>
     </div>
     <script src="popup.js"></script>
-  </body>
+</body>
 </html>
