@@ -3,3 +3,5 @@ uvicorn
 rich
 notion_client
 python-dotenv
+requests
+openai
