@@ -55,6 +55,34 @@
       box-shadow: 0 0 10px rgba(255, 204, 188, 0.2);
     }
 
+    input[type="text"], textarea {
+      width: 100%;
+      padding: 10px;
+      border: 2px solid #00887A;
+      border-radius: 6px;
+      box-sizing: border-box;
+      margin-bottom: 20px;
+      color: #00887A;
+    }
+
+    textarea[readonly], textarea:disabled {
+        background-color: #f0f0f0; /* Light grey background */
+        color: #b0b0b0; /* Grey text color */
+        cursor: not-allowed; /* Shows a "not allowed" cursor when trying to interact with it */
+    }
+
+    input[type="text"]:focus, textarea:focus {
+      border-color: #FFCCBC;
+      box-shadow: 0 0 10px rgba(255, 204, 188, 0.2);
+    }
+
+    button[disabled], button:disabled {
+      background-color: #f0f0f0; /* Light grey background */
+      color: #b0b0b0; /* Grey text color */
+      cursor: not-allowed; /* Shows a "not allowed" cursor when trying to interact with it */
+      box-shadow: none; /* Removes box shadow if any */
+  }
+
     #success {
       display: flex;
       align-items: center;
@@ -66,6 +94,30 @@
     #success span {
         font-weight: bold;
     }
+
+    #spinner {
+      display: none;
+      padding: 10px;
+      text-align: center;
+    }
+
+    select {
+        width: 100%;
+        padding: 10px;
+        border: 2px solid #00887A;
+        border-radius: 6px;
+        box-sizing: border-box;
+        margin-bottom: 20px;
+        color: #00887A;
+        appearance: none;
+        background: white;
+        cursor: pointer;
+    }
+
+    select:focus {
+        border-color: #FFCCBC;
+        box-shadow: 0 0 10px rgba(255, 204, 188, 0.2);
+    }
   </style>
 </head>
 <body>
@@ -76,7 +128,20 @@
       <label for="title">Title:</label>
       <input type="text" id="title">
       
+      <label for="summaryText">Summary:</label>
+      <textarea id="summaryText" style="height: 80px;"></textarea>
+
+      <label for="contentType">Type</label>
+      <select id="contentType">
+        <option value="paper">Paper</option>
+        <option value="blog">Blog Post</option>
+      </select>
+
+      <div id="spinner" style="display: none;">Creating summary...</div>
+      <button id="summarizeBtn">Summarize</button>
       <button id="saveBtn">Save</button>
+
+      <div id="errorMsg" style="color: red; display: none;"></div>
     </div>
     <div id="success" style="display: none;">
         <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#4CAF50" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>
