@@ -42,7 +42,7 @@ async def get_summary(url: str) -> TextSummary:
 
     try:
         summary = summarizer.summarize(page_text)
-        
+
     except Exception as e:
         print(e)
         return JSONResponse(status_code=500, content={"message": "Failed to summarize text."})
